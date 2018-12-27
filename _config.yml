@@ -1,0 +1,100 @@
+# Site settings
+title: yanshigou | Dzt's Blog
+SEOTitle: 董哲彤的博客 | Dzt
+header-img: img/about-bg.jpg
+email: 569578851@qq.com
+description: "狗哥的博客,"
+keyword: "董哲彤的博客，厌世狗的博客，厌世狗，博客，个人网站"
+url: "https://www.dogebug.cn"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+#weibo_username:     厌世狗
+zhihu_username:     ai-shang-yipi-ye-ma-i
+github_username:    yanshigou
+#twitter_username:   None
+#facebook_username:  None
+#linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+disqus_username: dzt
+
+# Netease settings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: 
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "狗哥养了一只猫"
+sidebar-avatar: /img/yanshigou.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+# Friends
+friends: [
+    {
+         title: "yanshigou's github",
+         href: "http://www.github.com/yanshigou"
+     }
+]
+

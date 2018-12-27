@@ -1,0 +1,19 @@
+{
+  "name": "Dzt Blog",
+  "short_name": "Dzt Blog",
+  "description": "一个热爱编程的少年.",
+  "icons": [{
+    "src": "icons/p.jpg",
+    "sizes": "128x128",
+    "type": "image/jpg"
+  }, {
+    "src": "icons/p.jpg",
+    "sizes": "512x512",
+    "type": "image/jpg"
+  }],
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
