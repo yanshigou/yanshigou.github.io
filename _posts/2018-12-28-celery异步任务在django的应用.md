@@ -22,9 +22,13 @@ Celery 是一个简单、灵活且可靠的，处理大量消息的分布式系�
 
 ## 前言
 
-在web应用中，用户触发一个操作，执行后台处理程序，这个程序需要执行很长时间才能返回结果。怎样才能不阻塞http请求，不让用户等待从而提高用户体验呢？这是本例需要解决的问题。
+在web应用中，用户触发一个操作，执行后台处理程序，这个程序需要执行很长时间才能返回结果。怎样才能不阻塞http请求，不让用户等待从而提高用户体验呢？当然就是使用celery分布式任务队列来实现。
 
-我会从服务器的配置开始
+
+
+**本文章直接从完整的django celery 项目开始搭建  稍后会写一个如何创建一个django celery项目**
+
+
 
 
 
@@ -45,7 +49,7 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
   sudo apt-get install python-dev
   pip install mysqlclient
 )
-4. mkdir www/test
+4. mkdir www/cmxcelery
 5. virtualenv --no-site-packages kkwork
 6. source kkwork/bin/activate  进入虚拟环境
 7. pip install django==1.11
@@ -60,11 +64,12 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 16. pip install uwsgi
 17. pip install requests
 18. pip install django-supervisor
-    python manage.py collectstatic  配置静态文件    比如admin的css js
-    使用fab pack   fab deploy  将配置好的uwsgi.ini  nginx.conf 和需要搭建的项目，打包上传和部署
-19. 建立软连接 ln -s /root/www/test/test_nginx.conf   /etc/nginx/sites-enabled/  
+19. pip install celery
+20. pip sintall django-celery
+21. 在本地终端先使用python manage.py collectstatic  配置静态文件    比如admin的css js              再使用fab pack   fab deploy  将配置好的uwsgi.ini  nginx.conf 和需要搭建的项目，打包上传和部署
+22. 建立软连接 ln -s /root/www/test/test_nginx.conf   /etc/nginx/sites-enabled/  
     如果创建软连接权限不够   前面加sudo
-20. sudo service nginx start
+23. sudo service nginx start
 
 
 
