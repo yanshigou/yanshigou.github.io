@@ -175,7 +175,7 @@ redirect_stderr=true
 
 这是我的supervisord.conf
 
-```ini
+```
 ; Sample supervisor config file.
 ;
 ; For more information on the config file, please see:
@@ -255,7 +255,9 @@ startsecs = 5        ; 启动 5 秒后没有异常退出，就当作已经正常
 ;killasgroup=false             ; SIGKILL the UNIX process group (def false)
 ;user=chrism                   ; setuid to this UNIX account to run the program
 ;redirect_stderr=true          ; redirect proc stderr to stdout (default false)
+redirect_stderr=true        ; 错误日志重定向到标准输出
 ;stdout_logfile=/a/path        ; stdout log path, NONE for none; default AUTO
+stdout_logfile=/a/path        ;日志地址
 ;stdout_logfile_maxbytes=1MB   ; max # logfile bytes b4 rotation (default 50MB)
 ;stdout_logfile_backups=10     ; # of stdout logfile backups (default 10)
 ;stdout_capture_maxbytes=1MB   ; number of bytes in 'capturemode' (default 0)
@@ -293,7 +295,6 @@ startsecs = 5        ; 启动 5 秒后没有异常退出，就当作已经正常
 ;killasgroup=false             ; SIGKILL the UNIX process group (def false)
 ;user=chrism                   ; setuid to this UNIX account to run the program
 ;redirect_stderr=false         ; redirect_stderr=true is not allowed for eventlisteners
-redirect_stderr=true        ; 错误日志重定向到标准输出
 ;stdout_logfile=/a/path        ; stdout log path, NONE for none; default AUTO
 ;stdout_logfile_maxbytes=1MB   ; max # logfile bytes b4 rotation (default 50MB)
 ;stdout_logfile_backups=10     ; # of stdout logfile backups (default 10)
