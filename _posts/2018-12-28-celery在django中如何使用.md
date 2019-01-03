@@ -109,9 +109,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'djcelery', # djcelery
     'paopao', # appname
-    'kombu.transport.django' # kombu
-
+    'kombu.transport.django' # kombu.transport.django则是基于Django的broker
+    
 ]
+# 如果希望在部署环境中使用, 最重要的便是使用更稳定和可扩展的broker, 而不是
+# kombu.transport.django.
 ```
 
 > celery任务并发只与celery配置项CELERYD_CONCURRENCY 有关，与CELERYD_MAX_TASKS_PER_CHILD没有关系，即CELERYD_CONCURRENCY=2，只能并发2个worker，此时运行较大的文件，执行两次可以看到两个task任务并行执行，而执行第三个任务时，开始排队，直到两个worker执行完毕。
