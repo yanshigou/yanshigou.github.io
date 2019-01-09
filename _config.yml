@@ -2,8 +2,8 @@
 title: yanshigou | Dzt's Blog
 SEOTitle: 董哲彤的博客 | Dzt
 header-img: img/about-bg.jpg
-email: 569578851@qq.com
-description: "狗哥的博客,"
+email: yanshigou@foxmail.com
+description: "厌世狗的博客 | Python、Django | 这里是厌世狗的个人博客，与你一起发现更大的世界。"
 keyword: "董哲彤的博客，厌世狗的博客，厌世狗，博客，个人网站"
 url: "https://www.dogebug.cn"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -29,7 +29,7 @@ paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN  
+timezone: CN  
 
 
 
