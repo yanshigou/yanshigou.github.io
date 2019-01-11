@@ -12,7 +12,7 @@
 
 修改来源于：[HaoQChen]( https://github.com/HaoQChen/HaoQChen.github.io) 
 
-非常感觉二位！
+非常感谢二位！
 
 # 以下部分借鉴[GJXS1980](https://github.com/GJXS1980/gjxs.github.io)  
 ## 动态鼠标曲线  
