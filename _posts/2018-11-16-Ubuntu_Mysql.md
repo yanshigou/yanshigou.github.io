@@ -253,6 +253,8 @@ mysql -u root
 > use mysql;
 
 > update user set authentication_string=PASSWORD("这里输入你要改的密码") where User = 'root'; #更改密码
+## or
+> UPDATE user SET Password=PASSWORD('newpassword') where USER='root';
 
 > update user set plugin= "mysql_native_password"; #如果没这一行可能也会报一个错误，因此需要运行这一行
 
