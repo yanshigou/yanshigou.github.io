@@ -175,11 +175,11 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 
 
 
-\# mysql
+# mysql
 
 
 
-\### 修改密码
+### 修改密码
 
 
 
@@ -187,11 +187,11 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 
 
 
-\```
+```
 
 $ sudo /etc/init.d/mysql stop
 
-\-------------------------------------
+-------------------------------------
 
 [sudo] wl 的密码：
 
@@ -199,7 +199,7 @@ $ sudo /etc/init.d/mysql stop
 
 $ sudo /usr/bin/mysqld_safe --skip-grant-tables --skip-networking &
 
-\```
+```
 
 
 
@@ -211,25 +211,24 @@ $ sudo /usr/bin/mysqld_safe --skip-grant-tables --skip-networking &
 
 
 
-\```
+```
 
 $ sudo mkdir -p /var/run/mysqld
 
 $ sudo chown mysql:mysql /var/run/mysqld
 
-\```
+```
 
 
 
 最后再次输入：
 
 
-
-\```
+```
 
 sudo /usr/bin/mysqld_safe ``--skip-grant-tables --skip-networking &
 
-\```
+```
 
 
 
@@ -237,11 +236,11 @@ sudo /usr/bin/mysqld_safe ``--skip-grant-tables --skip-networking &
 
 
 
-\```
+```
 
 mysql -u root
 
-\```
+```
 
 
 
@@ -249,19 +248,19 @@ mysql -u root
 
 
 
-\```
+```
 
-\> use mysql;
+> use mysql;
 
-\> update user set authentication_string=PASSWORD("这里输入你要改的密码") where User = 'root'; #更改密码
+> update user set authentication_string=PASSWORD("这里输入你要改的密码") where User = 'root'; #更改密码
 
-\> update user set plugin= "mysql_native_password"; #如果没这一行可能也会报一个错误，因此需要运行这一行
+> update user set plugin= "mysql_native_password"; #如果没这一行可能也会报一个错误，因此需要运行这一行
 
-\> flush  privileges ; #更新所有操作权限
+> flush  privileges ; #更新所有操作权限
 
-\> quit;
+> quit;
 
-\```
+```
 
 
 
@@ -273,17 +272,17 @@ mysql -u root
 
 
 
-\```
+```
 
-\> sudo /etc/init.d/mysql stop
+> sudo /etc/init.d/mysql stop
 
-\>
+>
 
-\> sudo /etc/init.d/mysql start # reset mysql
+> sudo /etc/init.d/mysql start # reset mysql
 
-\> mysql -u root -p
+> mysql -u root -p
 
-\```
+```
 
 
 
@@ -295,11 +294,11 @@ mysql -u root
 
 
 
-\# 远程权限
+# 远程权限
 
 
 
-\### 开放3306端口
+### 开放3306端口
 
 
 
@@ -307,13 +306,13 @@ mysql -u root
 
 
 
-\```
+```
 
-\# netstat -an | grep 3306
+# netstat -an | grep 3306
 
 tcp    0   0 127.0.0.1:3306      0.0.0.0:*         LISTEN
 
-\```
+```
 
 
 
@@ -323,11 +322,11 @@ tcp    0   0 127.0.0.1:3306      0.0.0.0:*         LISTEN
 
 
 
-\```
+```
 
-\# vim /etc/mysql/my.cnf
+# vim /etc/mysql/my.cnf
 
-\```
+```
 
 
 
@@ -349,7 +348,7 @@ tcp    0   0 127.0.0.1:3306      0.0.0.0:*         LISTEN
 
 
 
-\###  授权用户远程访问
+###  授权用户远程访问
 
 
 
@@ -359,11 +358,11 @@ tcp    0   0 127.0.0.1:3306      0.0.0.0:*         LISTEN
 
 
 
-\```
+```
 
-\# mysql -uroot -pyour_password
+# mysql -uroot -pyour_password
 
-\```
+```
 
 
 
@@ -371,27 +370,27 @@ tcp    0   0 127.0.0.1:3306      0.0.0.0:*         LISTEN
 
 
 
-\```
+```
 
 mysql> grant all on *.* to user_name@'%' identified by 'user_password';
 
-\```
+```
 
 
 
-\### 重启mysql服务，使配置生效
+### 重启mysql服务，使配置生效
 
 
 
-\```
+```
 
-\# /etc/init.d/mysql restart
+# /etc/init.d/mysql restart
 
-\```
+```
 
 
 
-\# 远程db没有mysql库，添加root密码
+# 远程db没有mysql库，添加root密码
 
 
 
@@ -407,15 +406,15 @@ mysql> grant all on *.* to user_name@'%' identified by 'user_password';
 
 
 
-\```
+```
 
-\# mysqld_safe --skip-grant-table
+# mysqld_safe --skip-grant-table
 
 or
 
-\# /usr/bin/mysqld_safe --skip-grant-table
+# /usr/bin/mysqld_safe --skip-grant-table
 
-\```
+```
 
 
 
@@ -423,17 +422,17 @@ or
 
 
 
-   \```
+   ```
 
    mysql -u root mysql
 
    UPDATE user SET Password=PASSWORD('newpassword') where USER='root';//重置root密码
 
-    
+​    
 
    delete from user where USER='';//删除空用户
 
-    
+​    
 
    FLUSH PRIVILEGES;//记得要这句话，否则如果关闭先前的终端，又会出现原来的错误
 
@@ -441,7 +440,7 @@ or
 
    
 
-   \```
+   ```
 
 
 
