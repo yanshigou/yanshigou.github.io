@@ -1,5 +1,5 @@
 ---
-title: "最近使用ubuntu服务器遇到的事儿"
+title: "Ubuntu，MySQL权限"
 date: 2018-11-16 11:06
 author: dzt
 subtitle: 服务器部署，mysql配置，......
@@ -119,7 +119,7 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 
   sudo apt-get install mysql-server
 
-  sudo apt-get mysql-client
+  sudo apt-get install mysql-client
 
   sudo apt-get install libmysqlclient-dev
 
@@ -326,6 +326,9 @@ tcp    0   0 127.0.0.1:3306      0.0.0.0:*         LISTEN
 
 # vim /etc/mysql/my.cnf
 
+# 或者是这个文件
+
+# sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
 
