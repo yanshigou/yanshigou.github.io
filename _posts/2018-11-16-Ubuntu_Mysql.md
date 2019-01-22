@@ -1,5 +1,5 @@
 ---
-title: "Ubuntu，MySQL权限"
+title: "Ubuntu服务器部署，MySQL远程权限"
 date: 2018-11-16 11:06
 author: dzt
 subtitle: 服务器部署，mysql配置，......
@@ -392,6 +392,27 @@ mysql> grant all on *.* to user_name@'%' identified by 'user_password';
 # /etc/init.d/mysql restart
 
 ```
+
+### 如何还是不行，检查防火墙(因为我是阿里云服务器)
+
+```
+# telnet ip port
+```
+
+```
+(kkwork) root@dzt:~/www/test# telnet 47.106.174.128  3306
+Trying 47.106.174.128...
+telnet: Unable to connect to remote host: Connection timed out
+```
+
+测试失败，说明防火墙不允许连接3306端口。根据不同操作系统，不同防火墙，配置防火墙允许3306连接。 
+一般情况下经过以上步骤，就能确保连接成功，但本人不幸千万次尝试都不能成功[抓狂]。想到阿里云是不是有更严格的安全策略，登录云服务器控制台->安全组->配置规则。默认情况下，入方向阿里云只允许访问3389，22，-1端口，所以添加3306，果然成功。 
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/fanghuoqiang.png)
+
+
+
+
 
 
 
