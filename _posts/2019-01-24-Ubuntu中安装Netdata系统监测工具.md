@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu中安装Netdata系统监测工具"
-date: 2019-01-16 15:59
+date: 2019-01-24 14:35
 author: dzt
 subtitle:  Netdata系统实时监测工具
 tags:
