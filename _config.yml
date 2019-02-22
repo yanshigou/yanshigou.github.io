@@ -13,7 +13,7 @@ future: true
 
 # SNS settings
 #weibo_username:     厌世狗
-zhihu_username:     ai-shang-yipi-ye-ma-i
+zhihu_username:     yanshigou
 github_username:    yanshigou
 CSDN_username:      dogebug
 #twitter_username:   None
