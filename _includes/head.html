@@ -8,6 +8,25 @@
 	<meta name="google-site-verification" content="VU8hB7Uocg6Nf4wvdbaUKhuRLOnCabAzWv8cubxmaiU" />
 	<meta name="google-site-verification" content="XPlPTgVGj3c6c8141Nyp7nkCd7PWX8ED8q_VAUVl9Vc" />
 	<meta name="baidu-site-verification" content="cUTA8r0za1" />
+	<script type="text/javascript" src="{{ site.baseurl }}/js/tctip-1.0.3.js"></script>
+	<script>
+	  new tctip({
+		top: '20%',
+		button: {
+		  id: 4,
+		  type: 'dashang'
+		},
+		list: [
+		  {
+			type: 'alipay',
+			qrImg: '{{ site.baseurl }}/img/dashang/alipay.png'
+		  }, {
+			type: 'wechat',
+			qrImg: '{{ site.baseurl }}/img/dashang/wechatpay.png'
+		  }
+		]
+	  }).init()
+	</script>
     
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
