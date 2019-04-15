@@ -1,4 +1,5 @@
 ---
+
 title: "打包py文件为exe文件 + 把以前自己的脚本使用tkinter打包"
 date: 2019-04-15 17:43
 author: dzt
@@ -30,7 +31,31 @@ tags:
 
 
 
+
+
+
+
+
+
 ## 效果
+
+```python
+pip3 install pyinstaller  # 安装pyinstaller 及其依赖包
+```
+
+```python
+pyinstaller -F -w -i bitbug_favicon.ico tk_nginx.py  #  打包tk_nginx.py为tk_nginx.exe
+```
+
+-F 打包为单个文件
+
+-D 打包为文件夹
+
+-w 去掉命令行终端框 只对Windows有效
+
+-i 添加图标
+
+
 
 ![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/tk_nginx.png)
 
