@@ -9,6 +9,8 @@ tags:
   - Error
 ---
 
+
+
 ## OSError: mysql_config not found
 
 查找mysql_config文件夹位置，我的在`/usr/local/opt/mysql@5.7/bin`这个路径下，解决方法：
