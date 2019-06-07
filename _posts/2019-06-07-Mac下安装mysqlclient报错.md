@@ -1,14 +1,14 @@
 ---
-title: "Mac下安装mysqlclient报错"
-date: 2019-06-07 13:44
+
+title: "解决Mac下安装mysqlclient报错"
+date: 2019-06-07 13:43
 author: dzt
-subtitle: OSError: mysql_config not found、error: command 'clang' failed with exit status 1
+subtitle:  OSError: mysql_config not found、error: command 'clang' failed with exit status 1
 tags:
   - Mac
   - mysql
   - Error
 ---
-
 
 
 ## OSError: mysql_config not found
