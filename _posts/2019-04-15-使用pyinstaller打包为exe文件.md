@@ -7,6 +7,7 @@ subtitle:  pyinstaller打包为exe
 tags:
   - python
   - exe
+  - tkinter
 ---
 
 ## 前言
