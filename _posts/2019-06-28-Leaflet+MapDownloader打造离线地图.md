@@ -4,10 +4,8 @@ date: 2019-06-28 17:47
 author: dzt
 subtitle: 记录一下
 tags:
-  - python
-  - Mac
-  - tkinter
-  - app
+  - 离线地图
+  - Leaflet+MapDownloader
 ---
 
 
@@ -27,7 +25,6 @@ tags:
 配置MapDownloader.exe.config
 
 ```html
-{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
