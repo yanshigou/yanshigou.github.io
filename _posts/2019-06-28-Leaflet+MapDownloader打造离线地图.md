@@ -49,7 +49,7 @@ tags:
 
     $.get('/media/a.txt', function (csv) {
 
-            {#$.get('{% url "point" %}', function(csv) {#}
+            {#$.get('', function(csv) {#}
             var data = csv.split('\n');
             $.each(data, function (n, value) {
                 // 索引 值
