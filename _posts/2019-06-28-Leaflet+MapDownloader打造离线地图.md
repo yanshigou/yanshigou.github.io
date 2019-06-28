@@ -5,8 +5,7 @@ author: dzt
 subtitle: 记录一下
 tags:
   - 离线地图
-  - Leaflet
-  - MapDownloader
+  - Leaflet+MapDownloader
 ---
 
 
