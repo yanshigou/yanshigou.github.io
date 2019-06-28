@@ -4,8 +4,10 @@ date: 2019-06-28 17:47
 author: dzt
 subtitle: 记录一下
 tags:
-  - OfflineMap
-  - Leaflet+MapDownloader
+  - python
+  - Mac
+  - tkinter
+  - app
 ---
 
 
