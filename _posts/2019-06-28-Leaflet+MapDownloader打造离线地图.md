@@ -25,27 +25,6 @@ tags:
 配置MapDownloader.exe.config
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Leaflet - GMap.NET TileHost</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <link rel="stylesheet" href="{% static 'dist/leaflet.css' %}"/>
-    <!--[if lte IE 8]>
-   <link rel="stylesheet" href="dist/leaflet-ie.css" />
-   <link rel="stylesheet" href="dist/locate-ie.css"/>
-   <![endif]-->
-    <link rel="stylesheet" href="{% static 'dist/mobile.css' %}"/>
-    <link rel="stylesheet" href="{% static 'dist/locate.css' %}"/>
-
-    <script src="{% static 'dist/leaflet.js' %}"></script>
-    <script src="{% static 'dist/proj4js-compressed.js' %}"></script>
-    <script src="{% static 'dist/proj4leaflet.js' %}"></script>
-    <script src="{% static 'dist/locate.js' %}"></script>
-    <script src="{% static 'vendor/jquery/jquery.js' %}"></script>
-</head>
 <body>
 <div id="map"></div>
 <script type="text/javascript">
@@ -87,9 +66,6 @@ tags:
 
         }
     );
-
-
 </script>
 </body>
-</html>
 ```
