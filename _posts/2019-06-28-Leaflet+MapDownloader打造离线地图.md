@@ -4,7 +4,7 @@ date: 2019-06-28 17:47
 author: dzt
 subtitle: 记录一下
 tags:
-  - 离线地图
+  - OfflineMap
   - Leaflet+MapDownloader
 ---
 
