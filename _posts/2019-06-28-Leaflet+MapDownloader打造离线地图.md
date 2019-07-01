@@ -14,6 +14,10 @@ tags:
 
 有空再填坑
 
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/leaflet.png)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/leaflet2.png)
+
 
 
 下载MapDownloader地图下载器
@@ -47,25 +51,39 @@ tags:
         layers: [amapNormalLayer]
     });
 
-    $.get('/media/a.txt', function (csv) {
+    $.get('/media/all_address_info.txt', function (csv) {
 
-            {#$.get('', function(csv) {#}
             var data = csv.split('\n');
             $.each(data, function (n, value) {
                 // 索引 值
-                {#alert(n + ' ' + value);#}
                 console.log(value);
+                if (value) {
+                    //没有金额，跳过：
+                    var la = parseFloat(value.split(',')[0]);
+                    var ln = parseFloat(value.split(',')[1]);
+                    var address = value.split(',')[2];
+                    var address_id = value.split(',')[3];
+                    console.log(la, ln, address);
+                    var icon = L.icon({
+                        iconUrl: "/media/image/wt_sxt.png",
+                        iconSize: [40, 40],
+                        iconAnchor: [30, 30]
+                    });
+                    var marker = L.marker([ln, la], {icon}).addTo(map);
+                    marker.bindPopup('<a href="/devices/deviceModify/'+address_id+'/'+'">'+address+'</a>').openPopup();
 
-                var la = parseFloat(value.split(',')[0]);
-                var ln = parseFloat(value.split(',')[1]);
-                var address = parseFloat(value.split(',')[1]);
-                console.log(la, ln, address);
-                var marker = L.marker([ln, la]).addTo(map);
+                }
 
             });
 
         }
     );
+
+
 </script>
 </body>
 ```
+
+- [Marker](https://leafletjs.com/reference-1.0.3.html#marker) 用于在地图上添加可点击和移动的图标
+- [Popup](https://leafletjs.com/reference-1.0.3.html#popup) 用于在地图的某个点打开弹出窗口
+- [Tooltip](https://leafletjs.com/reference-1.0.3.html#tooltip) 用于在地图的某个点显示少量文字
