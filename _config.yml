@@ -74,7 +74,7 @@ netease_comment: false
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "狗哥养了一只猫"
-sidebar-avatar: /img/yanshigou.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/dzt.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
