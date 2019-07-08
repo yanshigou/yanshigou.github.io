@@ -356,3 +356,26 @@ supervisorctl reload
 # 根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启：
 supervisorctl update
 ```
+
+
+
+*2019-07-08 更新*
+
+## 由于客户的服务器断电造成supervisor端口被占用
+
+> Another program is already listening on a port that one of our HTTP servers is configured to use.  Shut this program down first before starting supervisord.
+> For help, use /usr/bin/supervisord -h
+
+
+
+**解决**
+
+```shell
+出现这种问题后 以此使用以下3个命令
+sudo unlink /var/tmp/supervisor.sock  查看my_supervisord.conf配置的路径
+supervisord -c ~/chengdu/my_supervisord.conf  手动启动
+supervisorctl -c ~/chengdu/my_supervisord.conf status  这个命令查看 是否 有 RUNNING 有则运行起了
+```
+
+
+
