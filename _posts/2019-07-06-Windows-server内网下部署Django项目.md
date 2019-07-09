@@ -61,3 +61,59 @@ pip install --no-index --find-links=dependences -r requirements.txt
 **Windows：**
 
 [Django Windows+IIS+wfastcgi 环境下部署](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS0.png)
+
+](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS1.png)
+
+](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS2.png)
+
+](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS3.png)
+
+```
+安装IIS
+勾选FTP Web管理工具 万维网服务
+wfastcgi-enable 获取python路径和wfastcgi路径
+IIS添加网站
+物理路径为文件夹路径
+配置web.config
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <handlers>
+            <add name="Python FastCGI" 
+                 path="*" 
+                 verb="*" 
+                 modules="FastCgiModule" 
+                 scriptProcessor="python路径和wfastcgi路径" 
+                 resourceType="Unspecified" 
+                 requireAccess="Script"/>
+        </handlers>
+    </system.webServer>
+    <appSettings>
+        <add key="WSGI_HANDLER" value="django.core.wsgi.get_wsgi_application()" />
+        <add key="PYTHONPATH" value="Django目录" />
+        <add key="DJANGO_SETTINGS_MODULE" value="traffic_mgmt.settings" />
+    </appSettings>
+</configuration>
+添加虚拟目录static
+同样配置一个web.config
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <!-- this configuration overrides the FastCGI handler to let IIS serve the static files -->
+        <handlers>
+            <clear/>
+            <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="File" requireAccess="Read" />
+        </handlers>
+    </system.webServer>
+</configuration>
+media同理
+```
+
