@@ -62,17 +62,20 @@ pip install --no-index --find-links=dependences -r requirements.txt
 
 [Django Windows+IIS+wfastcgi 环境下部署](https://www.cnblogs.com/wcwnina/p/10960242.html)
 
+
+
+**以下是我在本机上测试**
+
 ![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS0.png)
 
-](https://www.cnblogs.com/wcwnina/p/10960242.html)
 
 ![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS1.png)
 
-](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
 
 ![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS2.png)
 
-](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
 
 ![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS3.png)
 
