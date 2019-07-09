@@ -51,34 +51,7 @@ pip install --no-index --find-links=dependences -r requirements.txt
 ## Windows上IIS部署Django、Windows server上IIS部署django
 
 > 网上资料很多、贴上地址
-
-**Windows-server：**
-
-[django中文网-Windows server iis部署Django详细操作](https://www.django.cn/article/show-21.html)
-
-
-
-**Windows：**
-
-[Django Windows+IIS+wfastcgi 环境下部署](https://www.cnblogs.com/wcwnina/p/10960242.html)
-
-
-
-**以下是我在本机上测试**
-
-![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS0.png)
-
-
-![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS1.png)
-
-
-
-![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS2.png)
-
-
-
-![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS3.png)
-
+> 
 ```
 安装IIS
 勾选FTP Web管理工具 万维网服务
@@ -119,4 +92,45 @@ IIS添加网站
 </configuration>
 media同理
 ```
+
+**Windows-server：**
+
+[django中文网-Windows server iis部署Django详细操作](https://www.django.cn/article/show-21.html)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-0.jpg)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-1.jpg)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-2.jpg)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-3.jpg)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-4.jpg)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-5.jpg)
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/iis-6.jpg)
+
+
+
+**Windows：**
+
+[Django Windows+IIS+wfastcgi 环境下部署](https://www.cnblogs.com/wcwnina/p/10960242.html)
+
+
+
+**以下是我在本机上测试**
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS0.png)
+
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS1.png)
+
+
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS2.png)
+
+
+
+![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS3.png)
 
