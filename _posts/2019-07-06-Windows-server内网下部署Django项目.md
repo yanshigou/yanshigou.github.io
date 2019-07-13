@@ -59,6 +59,8 @@ wfastcgi-enable 获取python路径和wfastcgi路径
 IIS添加网站
 物理路径为文件夹路径
 配置web.config
+```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -78,8 +80,10 @@ IIS添加网站
         <add key="DJANGO_SETTINGS_MODULE" value="traffic_mgmt.settings" />
     </appSettings>
 </configuration>
+```
 添加虚拟目录static
 同样配置一个web.config
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -90,8 +94,9 @@ IIS添加网站
         </handlers>
     </system.webServer>
 </configuration>
-media同理
 ```
+media同理
+
 
 **Windows-server：**
 
