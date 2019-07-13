@@ -134,3 +134,37 @@ media同理
 
 ![](https://raw.githubusercontent.com/yanshigou/yanshigou.github.io/master/img/t/IIS3.png)
 
+
+
+## 解决MySQL缺少dll文件，程序0xc00007b等错误
+
+
+
+**缺少MSVCR120.dll、MSVCP120.dll文件只需要下载对应缺少文件，放入C:\Windows\System32文件夹下**
+
+
+
+**应用程序无法正常启动0xc00007b...**
+
+> 此问题花了我很多时间去解决，在有外网的情况下很简单，下载一个direct修复工具，他会自动检测缺少vc++环境的问题，并下载修复
+>
+> 但是，我是在内网的情况下，查阅了不少资料，尝试了很多种方法，下载了很多软件、文件等(directx、dxwebsetup、vcredist)都没解决！
+
+**最终解决：**
+
+相关软件已上传至我的 **[GitHub-yanshigou.github.io](https://github.com/yanshigou/yanshigou.github.io/tree/master/msvisualc)**
+
+下载Windows运行库 **MSVBCRT.AIO.2019.06.30.X86 X64.exe**，安装
+
+```shell
+mysqld --initialize  # 在这里已经不报0xc0007b错误了，说明已经解决了
+mysqld install
+net start mysql
+set password for root@localhost = password('123456');
+mysql -uroot -p123456
+```
+
+搞定
+
+2019-07-12 填坑
+
