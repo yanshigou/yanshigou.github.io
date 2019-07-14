@@ -164,7 +164,7 @@ media同理
 
 **最终解决：**
 
-相关软件已上传至我的 **[GitHub-yanshigou.github.io](https://github.com/yanshigou/yanshigou.github.io/tree/master/msvisualc)**
+相关软件已上传至我的 **[GitHub-yanshigou.github.io-releases](https://github.com/yanshigou/yanshigou.github.io/releases/tag/msvisualc)**
 
 下载Windows运行库 **MSVBCRT.AIO.2019.06.30.X86 X64.exe**，安装
 
@@ -176,7 +176,7 @@ set password for root@localhost = password('123456');
 mysql -uroot -p123456
 ```
 
-搞定
 
-2019-07-12 填坑
+
+2019-07-14 update
 
