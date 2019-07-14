@@ -53,12 +53,16 @@ pip install --no-index --find-links=dependences -r requirements.txt
 > 网上资料很多、贴上地址
 > 
 
-
 安装IIS
+
 勾选FTP Web管理工具 万维网服务
+
 wfastcgi-enable 获取python路径和wfastcgi路径
+
 IIS添加网站
+
 物理路径为文件夹路径
+
 配置web.config
 
 ```xml
@@ -83,7 +87,9 @@ IIS添加网站
 </configuration>
 ```
 添加虚拟目录static
+
 同样配置一个web.config
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
