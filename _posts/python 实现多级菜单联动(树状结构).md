@@ -36,6 +36,8 @@ level = request.query_params.get('level', "99")
 
 
 
+数据
+
 ```
 {
     "data": [
@@ -167,5 +169,37 @@ level = request.query_params.get('level', "99")
     "msg": null,
     "code": 200
 }
+```
+
+
+
+事务回滚
+
+在m保存成功之后，rbm保存失败时启动事务回滚 均不保存
+
+```
+from django.db import transaction
+
+requestData = request.data.copy()
+roleId = "ro" + "".join(str(uuid.uuid1()).split('-'))
+requestData['roleId'] = roleId
+m = RoleModelSerializer(data=requestData)
+with transaction.atomic():  # 事务回滚
+	if m.is_valid():
+    	m.save()
+        menuIdList = request.data.get("menuIdList")
+
+		for menuId in menuIdList:
+            rbm = RoleBindMenuModelSerializer(data={"menuId": menuId[0], "roleId": roleId})
+            if rbm.is_valid():
+                rbm.save()
+
+            else:
+                errors = m.errors.values()
+                errors = rbm.errors.values()
+                print(rbm.errors)
+                print(m.errors)
+                return http_response(data={"errors": errors}, msg="权限菜单绑定失败", success=False, code=400)
+         return http_response(msg="新增权限成功")
 ```
 
