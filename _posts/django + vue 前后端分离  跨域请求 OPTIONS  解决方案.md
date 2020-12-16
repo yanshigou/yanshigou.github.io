@@ -1,4 +1,12 @@
-django + vue 前后端分离  跨域请求 OPTIONS  解决方案
+---
+title: "django + vue 前后端分离  跨域请求 OPTIONS  解决方案 拦截器等"
+date: 2020-05-14 18:58
+author: dzt
+subtitle: django + vue 前后端分离  跨域请求 OPTIONS  解决方案
+tags:
+  - Django
+  - vue
+---
 
 
 
@@ -8,11 +16,22 @@ django + vue 前后端分离  跨域请求 OPTIONS  解决方案
 
 3.  开启
 
+
    ```
-   # 跨域
-   CORS_ORIGIN_ALLOW_ALL = True
-   CORS_ALLOW_CREDENTIALS = True
-   CORS_ALLOW_HEADERS = ('*', )   # 重要
+# TokenAuthentication 解决APIView中csrf_token 403
+"""
+"detail": "CSRF Failed: CSRF token missing or incorrect."
+"""
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+   
+# 跨域
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = ('*', )   # 重要
    ```
 
 4. 中间件中加入

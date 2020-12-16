@@ -1,3 +1,14 @@
+---
+title: "python 实现多级菜单联动(树状结构)"
+date: 2020-05-14 18:58
+author: dzt
+subtitle: python 实现多级菜单联动(树状结构)
+tags:
+  - Django
+  - python
+---
+
+
 python 实现多级菜单联动(树状结构)
 
 ```python
