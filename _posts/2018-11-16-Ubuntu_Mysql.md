@@ -117,7 +117,7 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 
 (   pip install django==1.11
 
-  sudo apt-get install mysql-server
+  sudo apt-get install mysql-server     sudo cat /etc/mysql/debian.cnf查看账号密码 
 
   sudo apt-get install mysql-client
 
@@ -129,11 +129,25 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 
 )
 
+# Automatically generated for Debian scripts. DO NOT TOUCH!
+[client]
+host     = localhost
+user     = debian-sys-maint
+password = eubLmpJ4wCpyKxM0
+socket   = /var/run/mysqld/mysqld.sock
+[mysql_upgrade]
+host     = localhost
+user     = debian-sys-maint
+password = eubLmpJ4wCpyKxM0
+socket   = /var/run/mysqld/mysqld.sock
+
+
+
 
 
 4. mkdir www/test
 
-5. virtualenv --no-site-packages kkwork
+5. virtualenv --no-site-packages kkwork -p /usr/bin/python3
 
 6. source kkwork/bin/activate  进入虚拟环境
 
@@ -153,7 +167,7 @@ LC_ALL=C 是为了去除所有本地化的设置，让命令能正确执行。
 
 14. pip install mysql-python
 
-15. sudo apt-get install nginx
+15. sudo apt-get install nginxn
 
 16. pip install uwsgi
 
